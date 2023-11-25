@@ -55,7 +55,7 @@ void card::getCard(vector<vector<string>>& allCard) {
 
 			if (!v.empty()) {
 				p_card.push_back(v.back());
-				allCard[randNum].pop_back();
+				//allCard[randNum].pop_back();
 			}
 			else i--;
 		}
