@@ -55,7 +55,7 @@ void card::getCard(vector<vector<string>>& allCard) {
 
 			if (!v.empty()) {
 				p_card.push_back(v.back());
-				//allCard[randNum].pop_back();
+				allCard[randNum].pop_back();
 			}
 			else i--;
 		}
@@ -66,9 +66,9 @@ int card::rollCard(vector<vector<string>>& paidCard_in) {
 	showCard();
 
 	int num; 
-	cout << "낼 조합의 개수를 적으세요>>" << endl;
+	cout << "낼 카드 조합의 개수를 적으세요>>" << endl;
 	cin >> num;
-	cout << "가능한 조합을 적고 만약 낼 게 없으면 1을 적으세요>> ";
+	cout << "가능한 카드 조합을 적고 만약 낼 게 없으면 1을 적으세요>> ";
 
 	vector<string> comb(num);
 	for (int i = 0; i < num; i++) {
@@ -129,9 +129,9 @@ int card::sendCard(vector<vector<string>>& paidCard_in) {
 	showCard();
 
 	int num;
-	cout << "낼 조합의 개수를 적으세요>>" << endl;
+	cout << "낼 카드 조합의 개수를 적으세요>>" << endl;
 	cin >> num;
-	cout << "가능한 조합을 적고 만약 낼 게 없으면 1을 적으세요>> ";
+	cout << "가능한 카드 조합을 적고 만약 낼 게 없으면 1을 적으세요>> ";
 
 	vector<string> comb(num);
 	for (int i = 0; i < num; i++) {
@@ -212,7 +212,7 @@ int main() {
 		ptr->getCard(allCard); // 플레이어에게 카드 배분
 		int check; int isRoll=0;
 
-		cout << "등록을 하실 거면 0을 적고 이미 한 상태라면 1을 적으세요>>";
+		cout << "등록을 원하면 0을 적고 이미 한 상태라면 1을 적으세요>>";
 		cin >> check;
 
 		if(!check)
